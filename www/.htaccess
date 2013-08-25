@@ -1,0 +1,7 @@
+Require all granted
+# Require all denied
+# Require ip 59.7.14.186
+
+RewriteEngine on
+RewriteRule ^([A-Za-z0-9\-]*)$ index.php?__action=$1 [QSA,L]
+RewriteRule ^user/([A-Za-z0-9_]+)/([0-9]+)/([A-Za-z0-9\-]*)$ index.php?__action=user&__user=$2&__user_action=$3 [QSA,L]
